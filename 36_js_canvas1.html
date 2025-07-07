@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; }
+
+        canvas{
+            border: 1px solid blue;
+            margin: 30px;
+        }
+    </style>
+    <script>
+        let ctx = null;
+
+        let image1 = null;
+
+        //초기화 이벤트
+        window.onload = function(){
+
+
+            //그리는 Canvas정보 구하기
+            const myCanvas = document.getElementById("myCanvas");
+            
+            //그리기도구 구하기
+            ctx = myCanvas.getContext("2d");
+
+            
+
+
+
+            //텍스트 출력
+
+            ctx.font = "30px 굴림체";
+            //그림자
+            ctx.fillStyle="black";
+            ctx.fillText("Canvas그리기연습", 100+1,50+1);
+            //원본
+            ctx.fillStyle="red";
+            ctx.fillText("Canvas그리기연습", 100,50);
+
+            //테두리만 그리는 텍스트
+            ctx.strokeStyle="blue";
+            ctx.font = "20px 굴림체";
+            ctx.strokeText("각종도형및 그림을 출력합니다",100,120);
+        
+
+
+            //사각형 그리기
+            //채우기
+            ctx.fillStyle = "red";
+            ctx.fillRect(10,150,100,100);
+       
+            //테두리
+            ctx.strokeStyle = "blue";
+            ctx.strokeRect(120,150,100,100);
+
+            //원그리기
+            //채워진 원
+            ctx.beginPath();
+            ctx.arc(280,200,50, 0, Math.PI/180*360 ,true);
+            ctx.fill();
+
+            //테두리만
+            ctx.beginPath();
+            ctx.arc(390,200,50, 0, Math.PI/180*360 ,true);
+            ctx.stroke();
+
+            //이미지 출력
+            //이미지 초기화
+            image1 = new Image();
+            image1.src = "./image/버섯돌이.png";
+            
+            image1.onload =function(){
+               //원본이미지크기 :  286 x 303 
+               ctx.drawImage(image1,10,280);
+               
+               //축소해서 출력         원본이미지    출력위치(화면)
+               ctx.drawImage(image1,0,0,286,303, 310,280, 100,120);
+            };
+            
+
+
+
+        };
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+<canvas id="myCanvas" width="500" height="600">현재브라우져에서는 지원되지 않습니다</canvas>    
+
+
+
+</body>
+</html>

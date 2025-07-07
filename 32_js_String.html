@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+            //명시적생성방법
+            let str1 = new String("ABCDEFGHIJKLMNOPQRSTUVWXYZ") ;
+
+            //묵시적생성방법
+            //          01234567890123456789012345  <- position(index)
+            let str  = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+            
+            let length = str.length;
+            document.write(`str's length=${length}<br>`);
+
+            let index = 5;
+            let ch    = str.charAt(index);
+            document.write(`index=${index}인 문자는 ${ch}<br>`);
+
+            for(let i=0;i<26;i++) { // i = 0 1 2 ... 25
+                let code  = str.charCodeAt(i);
+                let char  = str.at(i);//str[i];//str.charAt(i);
+                document.write(`${ char}'s ASCII code=${code}<br>`);
+            }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

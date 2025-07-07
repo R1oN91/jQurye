@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            ASCII(America Standard Code for Information Interchange) 
+            0~31  : 통신 및 제어문자
+            32~126: 일반문자
+                    'A': 65   'a':97  '0':48  ' ':32
+        */
+        document.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>");
+
+        for(let i=65; i<=90; i++){ // i = 65 66 67 ... 90
+           document.write( String.fromCharCode(i) );
+        }
+        document.write("<br>");
+
+        document.write("AbCdEfGhIjKlMnOpQrStUvWxYz<br>");
+
+        for(let i=65; i<=90; i++){ // i = 65 66 67 ... 90
+           if(i%2==1)
+             document.write( String.fromCharCode(i) );
+           else
+             document.write( String.fromCharCode(i+32) );
+        }
+        document.write("<br>");
+
+        //              대소소대소소대소소  
+        //              65 68 71   
+        //      i%3     2  2  2 
+        document.write("AbcDefGhiJklMnoPqrStuVwxYz<br>");
+
+        for(let i=65; i<=90; i++){ // i = 65 66 67 ... 90
+           if(i%3==2)
+             document.write( String.fromCharCode(i) );
+           else
+             document.write( String.fromCharCode(i+32) );
+        }
+        document.write("<br>"); 
+
+
+        //                67  70  73               
+        //   i%3          1   1   1
+        document.write("ABC-DEF-GHI-JKL-MNO-PQR-STU-VWX-YZ<br>");
+        for(let i=65; i<=90; i++){ // i = 65 66 67 ... 90
+             document.write( String.fromCharCode(i) );
+             if(i%3==1)
+               document.write( "-" );
+        }
+        document.write("<br>"); 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

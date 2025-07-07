@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        td{
+            text-align: right;
+            padding-right: 30px;
+        }
+    </style>
+
+    <script>
+       
+    //    document.write( parseInt(125600/50000) +"<br>");
+    //    document.write( parseInt(125600%50000) +"<br>");
+    //    document.write( parseInt(25600/10000) +"<br>");
+    //    document.write( parseInt(25600%10000) +"<br>");
+       
+       function fn_result(){
+            //1.입력금액 얻어오기
+            let money = document.getElementById("money").value;
+
+            //2.숫자체크 유효성
+
+            //3.권종별 갯수: 연산자  /   %
+            let money_50000 = 0;
+            let money_10000 = 0;
+            let money_5000  = 0;
+            let money_1000  = 0;
+            let money_500   = 0;
+            let money_100   = 0;
+            let money_50    = 0;
+            let money_10    = 0;
+
+            //money = 167860
+            //50000권 갯수 구하기
+            money_50000 = parseInt(money/50000); // parseInt(3.1123) or Math.floor(3.1123)
+            //몫구한후 나머지 잔액구하기
+            money = money % 50000; //   167860 - (money_50000*50000)
+            
+            // money = 17860
+            //10000권 갯수 구하기
+            money_10000 = parseInt(money/10000);
+            //몫구한후 나머지 잔액구하기
+            money = money % 10000; //7860  = 17860 % 10000 => 17860 -(money_10000*10000)
+
+            //5000권 갯수 구하기
+            money_5000 = parseInt(money/5000);
+            money = money % 5000;  //2860 = 7860%5000
+            
+            money_1000 = parseInt(money/1000);
+            money = money % 1000;  
+            
+            money_500 = parseInt(money/500);
+            money = money % 500;  
+
+            money_100 = parseInt(money/100);
+            money = money % 100;  
+
+            money_50 = parseInt(money/50);
+            money = money % 50;  
+
+            money_10 = parseInt(money/10);
+
+
+
+
+            //4.결과출력
+            document.getElementById("result_50000").innerHTML   = money_50000;
+            document.getElementById("result_10000").innerHTML   = money_10000;
+            document.getElementById("result_5000").innerHTML    = money_5000;
+            document.getElementById("result_1000").innerHTML    = money_1000;
+            document.getElementById("result_500").innerHTML     = money_500;
+            document.getElementById("result_100").innerHTML     = money_100;
+            document.getElementById("result_50").innerHTML      = money_50;
+            document.getElementById("result_10").innerHTML      = money_10;
+       }
+ 
+
+    </script>
+
+
+</head>
+<body>
+    금액 :  <input id="money">
+           <input type="button" value="결과보기" onclick="fn_result();">
+    <hr>
+    <table border="1" width="300">
+        <tr>
+           <th width="30%">50000원권</th>
+           <td><span id="result_50000">0</span>(매)</td>
+        </tr>
+        <tr>
+           <th width="30%">10000원권</th>
+           <td><span id="result_10000">0</span>(매)</td>
+        </tr>
+        <tr>
+           <th width="30%">5000원권</th>
+           <td><span id="result_5000">0</span>(매)</td>
+        </tr>
+        <tr>
+           <th width="30%">1000원권</th>
+           <td><span id="result_1000">0</span>(매)</td>
+        </tr>
+        <tr>
+           <th width="30%">500원</th>
+           <td><span id="result_500">0</span>(개)</td>
+        </tr>
+        <tr>
+           <th width="30%">100원</th>
+           <td><span id="result_100">0</span>(개)</td>
+        </tr>
+        <tr>
+           <th width="30%">50원</th>
+           <td><span id="result_50">0</span>(개)</td>
+        </tr>
+        <tr>
+           <th width="30%">10원</th>
+           <td><span id="result_10">0</span>(개)</td>
+        </tr>
+    </table>       
+</body>
+</html>

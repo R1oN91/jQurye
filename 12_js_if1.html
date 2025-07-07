@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fn_result(){
+
+            let age = document.getElementById("age").value;
+
+            let result = "";
+            //0~9
+            if(age>=0 && age<10){
+                result = `${age}살 영유아 이군요`;
+            }else if(age>=10 && age < 20){
+                result = `${age}살 10대 이군요`;
+            }else if(age>=20 && age < 30){
+                result = `${age}살 20대 이군요`;
+            }else if( Math.floor(age/10) == 3 ){ // else if(age>=30 && age < 40)
+                result = `${age}살 30대 이군요`;
+            }else if(age>=40 && age < 50){
+                result = `${age}살 40대 이군요`;
+            }else if(age>=50 && age < 60){
+                result = `${age}살 50대 이군요`;
+            }
+             
+
+            //결과출력
+            document.getElementById("result").innerHTML = result;
+
+        }//end:fn_result()
+
+    </script>
+
+</head>
+<body>
+    나이:<input id="age">
+        <button onclick="fn_result();">결과보기</button>
+    <hr>
+    <div id="result"></div>    
+</body>
+</html>
