@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-box {
+            display: grid;
+            border: 2px solid red;
+            width: 800px;
+            height: 600px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            align-content: center;
+            text-align: center;
+        }
+
+        .header-menu > li {
+            list-style-type: none;
+            display: inline-block;
+            margin: auto;
+            color: blue;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .header-menu > li > a:hover{
+            color: red;
+            text-decoration: none;
+        }
+        .aside-menu > li {
+            list-style-type: none;
+            display: inline-block;
+            margin: auto;
+            color: blue;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .aside-menu > li > a:hover{
+            color: red;
+            text-decoration: none;
+        }
+
+        .mini-box {
+            background-color: #f1f1f1;
+            border: 2px solid none;
+            margin: 5px;
+        }
+
+        .header {
+            grid-column: 1 / 5;
+        }
+
+        .aside {
+            grid-row: 2 / 5;
+        }
+
+        .footer {
+            grid-column: 1 / 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-box">
+        <div class="mini-box header">
+            <ul class="header-menu">
+                <li><a href=.\28_CSS_shoppingmall.html>음반1</a></li>
+                <li><a href=.\28_CSS_shoppingmall2.html>음반2</a></li>
+                <li><a href=.\28_CSS_shoppingmall3.html>가전</a></li>
+                <li><a href=.\28_CSS_shoppingmall4.html>의류</a></li>
+            </ul>
+        </div>    
+        <div class="mini-box aside">
+            <ul class="aside-menu">
+                <li><a href=#>국내음반</a></li>
+                <li><a href=#>일본음반</a></li>
+                <li><a href=#>영미음반</a></li>
+                <li><a href=#>기타</a></li>
+            </ul>
+        </div>
+            <div class="mini-box">
+                <img src=.\img\28\album\01.jfif alt="album cover" width=100 height=100>
+                    <p>
+                        <a href=#> Frederhythm3 </a> <br>38,800원</p>
+            </div>
+            <div class="mini-box">
+                <img src=.\img\28\album\02.jfif alt="album cover" width=100 height=100>
+                    <p> <a href=#> Oddloop </a> <br> 38,800원</p>
+            </div>
+            <div class="mini-box">
+                <img src=.\img\28\album\03.jfif alt="album cover" width=100 height=100>
+                    <p> <a href=#> Frederhythm2 </a> <br> 38,800원</p>
+            </div>
+            <div class="mini-box">
+                <img src=.\img\28\album\04.jfif alt="album cover" width=100 height=100>
+                    <p> <a href=#> Togenkyo </a> <br> 38,800원</p>
+            </div>
+            <div class="mini-box">
+                 <img src=.\img\28\album\05.jfif alt="album cover" width=100 height=100>
+                    <p> <a href=#> Frederhythm </a> <br> 38,800원</p>
+            </div>
+            <div class="mini-box">
+                <img src=.\img\28\album\06.jfif alt="album cover" width=100 height=100>
+                    <p> <a href=#> Togenkyo(2) </a> <br> 38,800원</p>
+            </div>
+        <div class="mini-box footer" style="text-align: left;">
+            <pre>고객센터 > 1588-1588
+상호명 : 쇼핑몰
+사업자등록번호 : 123-45-67890
+통신판매업신고번호 : 제 1234-서울강남-1234호
+주소 : 서울특별시 강남구 테헤란로 123
+            </pre>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-box{
+            /* display의 기본값은 block */
+            display: flex;
+            border : 2px solid red;
+            /* 자식 윈도우에 대한 배치 방향 row, column -reverse */
+            flex-direction: row;
+            /* 수평간격 center, flex-start, flex-end, space-around(좌우 둘레 마진값 동일), space-between(좌우 간격 없이 모두동일), space-evenly(모두 동일)*/
+            justify-content: space-evenly;
+            /* 수직간격 center, flex-start, flex-end, stretch(기본값) *
+            두가지 속성은 거의 비슷하지만 약간의 차이점이 있습니다. align-items는 수직축의 라인을 기준으로 아이템들이 정렬이 되고,
+            align-content는 수직축의 라인을 기준으로 (두 줄 이상 일 때만) 라인 자체가 정렬이 됩니다!
+            따라서 align-content는 flex-wrap이 wrap인 상태에서 두줄을 만들고 그 것을 수직 정렬한다고 생각하시면 될 것 같습니다. */
+            align-content: center;
+            flex-wrap: wrap;
+            height: 800px;
+        }
+        .mini-box{
+            width: 100px;
+            height: 100px;
+            background-color: #f1f1f1;
+            border: 2px solid black;
+            text-align: center;
+            align-content: center;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main-box">
+        <div class="mini-box">1</div>
+        <div class="mini-box">2</div>
+        <div class="mini-box">3</div>
+        <div class="mini-box">4</div>
+        <div class="mini-box">5</div>
+    </div>
+</body>
+</html>

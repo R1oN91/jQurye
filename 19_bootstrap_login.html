@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap 3.x -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        #main-box {
+            width: 500px;
+            margin: auto;
+            margin-top: 150px;
+        }
+        #buttons {
+            margin-top: 20px;
+            margin-bottom: 0px !important;
+        }
+        input{
+            border-width: 0px !important;
+        }
+        input:focus{outline: none;
+        }
+        input[type='button']{
+            width: 100px;
+            height: 40px;
+            margin-left: 10px; 
+            margin-right: 10px;
+        }
+       th{
+            text-align: center;
+            vertical-align: middle !important;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="main-box" class="panel panel-primary">
+            <div id=forms class="panel-heading">
+                <h4 class="panel-title">로그인</h4>
+            </div>
+            <!-- 바디 -->
+            <div class="panel-body">
+                <table class="table" id= buttons>
+                <tr>
+                    <th>아이디</th>
+                    <td><input class="form-control" type="text" name="id"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input class="form-control" type="password" name="password"></td>
+                </tr>
+                <!-- 로그인 버튼 -->
+                <tr>
+                    <td colspan="2" align="center">
+                        <input class="btn btn-success" type="button" value="로그인">
+                        <input class="btn btn-danger"  type="button" value="취소">
+                    </td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

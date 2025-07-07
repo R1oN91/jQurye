@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-box{
+            position: relative;
+            left: 50px;
+            top: 50px;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            background-color: orange;
+        }
+        .mini-box{
+            position: static;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black ;
+        }
+        .box1{
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        .box2{
+            position: absolute; /* 부모 기준 상대 위치 지정 */
+            left: 50px; /* 기존 순서에서 빠지고, 부모 요소 기준으로 왼쪽으로 50px 이동.
+            ex) mainbox의 position이 바뀌지 않은 경우 body 기준이지만, main-box의 position이 relative가 되면 부모를 따라 움직임. */ 
+            top: 50px;  
+            background-color: rgba(0, 255, 0, 0.5);
+        }
+        .box3{
+            position: fixed; /* 부모 기준이 아닌 브라우저 창 기준으로 위치 지정 */
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main-box">
+        <div class="mini-box box1">position:static</div>
+        <div class="mini-box box2">position:absolute</div>
+        <div class="mini-box box3">position:fixed</div>
+    </div>
+</body>
+</html>

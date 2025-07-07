@@ -20,6 +20,7 @@
     float: left;
     width: 30%;
     min-height: 400px;
+    margin-top: 100px;
     height: auto;
     background-color: darkgray;
 }
@@ -33,7 +34,7 @@
 #aside-right{
     float: left;
     width: 30%;
-    min-height: 400px;
+    min-height: 500px;
     height: auto;
     background-color: darkgray;
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap 3.x -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        *{
+            margin-top: 20px;
+        }
+        div{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+        }
+        table > caption{
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        th, td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table class="table table-hover table-striped table-bordered">
+            <!-- table caption -->
+            <caption><b>::::게시판 내용::::</b></caption>
+            <!-- table header -->
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>조회수</th>
+            </tr>
+            <!-- table data -->
+            <tr>
+                <td>3</td>
+                <td>날씨가 덥네</td>
+                <td>일길동</td>
+                <td>34</td>
+            </tr>
+            <tr class="info">
+                <td>2</td>
+                <td>오늘의 날씨는</td>
+                <td>이길동</td>
+                <td>14</td>
+            </tr>
+            <tr class="warning">
+                <td>1</td>
+                <td>오늘 점심은</td>
+                <td>삼길동</td>
+                <td>94</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ #main-box{
+    display: grid;
+    border : 2px solid red;
+    width: 800px;
+    height: 600px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+ }
+ .mini-box {
+    background-color: #f1f1f1;
+    border: 2px solid black;
+    margin: 5px;
+ }
+ .box1{
+  grid-column: 1 / 5 ;
+ }
+ .box2{
+  grid-row: 2 / 4 ;
+ }
+ .box3{
+  grid-row: 2 / 4 ;
+  grid-column: 2 / 5 ;
+ }
+ .box4{
+  grid-column: 1 / 5 ;
+ }
+
+</style>
+</head>
+<body>
+
+    <div id="main-box">
+        <div class="mini-box box1">header</div>
+        <div class="mini-box box2">aside</div>
+        <div class="mini-box box3">content</div>
+        <div class="mini-box box4">footer</div>
+
+    </div>
+
+</body>
+</html>

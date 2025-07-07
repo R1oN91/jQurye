@@ -1,0 +1,73 @@
+*{
+    margin:0
+}
+/* margin: auto; -> margin-left margin right가 동일하게 잡힘 */
+#main-box{
+    width: 800px;
+    height: 600px;
+    background-color: gray;
+    margin: auto;
+}
+/* width, height %값 -> 부모기준 */
+#header{
+    float: left;
+    width: 100%;
+    height: 25%;
+    background-color: red;
+}
+#aside-left{
+    float: left;
+    width: 30%;
+    min-height: 50%;
+    height: auto;
+    background-color: darkgray;
+}
+
+#content{
+    justify-content: center;  /* 가로 가운데 */
+    align-items: center; 
+    float: left;
+    width: 70%;
+    height: 50%;
+    background-color: black;
+}
+
+.mini-box{
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 7px;
+    float: left;
+    width: 42%;
+    height: 40%;
+    background-color: olive; 
+    box-shadow: 1px 1px 5px blue;
+}
+
+/*
+.box0{
+    background-color: #ff0000
+                      #rgb(255, 0, 0)
+}                     #rgba(255, 0, 0, 0.8)
+*/
+
+.box2{
+    background-color: orange
+}
+
+.box3{
+    background-color: skyblue
+}
+
+.box4{
+    background-color: cyan
+}
+
+
+#footer{
+    clear: both;
+    /* float 해지 */
+    width: 100%;
+    height: 25%;
+    background-color: green;
+}
