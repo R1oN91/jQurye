@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <!-- CSS(Cascading Style Sheets) 
+            1.inline방식 : 해당 태그내에 직접작성
+            2.internal방식(선언적방식) : 해당 페이지내에 선언적으로 작성 
+            3.external방식(CSS분리)
+            4.문법
+            선택자{ 
+                속성 : 값;
+                속성 : 값;
+            }
+        -->
+ 
+        <!-- 3.external방식 -->
+        <link rel="stylesheet"  href="./css/mystyle.css">
+
+
+        <!-- 2.internal(선언적방식) -->
+        <style>
+            
+            /* Universal Selector(모든요소) */
+            *{
+                margin:0;
+            }
+
+            body{
+               border: 1px solid red;
+            }
+
+            p{
+                border: 1px solid blue;
+                margin: 10px;
+                padding: 5px;
+                box-shadow: 1px 1px 3px black;
+
+            }
+        </style>
+    </head>
+    <body>
+        <!-- CSS inline적용  -->
+        <p style="color:red;">동해물과 백두산이</p>    
+
+        <p>마르고 닮도록</p>    
+        <p>하느님이 보우하사</p>    
+        <p>우리나라 만세</p>    
+
+        <p class="last-song">무궁화 삼천리 화려강산</p>    
+        <p class="last-song">대한사람 대한으로 길이 보전하세</p>    
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS selector 
+        스타일을 적용시킬 대상을 지정
+        1. Universal Selector : * (모든 Element)
+        2. Element Selector   : Tag 이름
+        3. Class Selector     : <p class="class-name">
+                                .class-name{ color:red ;}
+        4. ID Selector        : <p id="phrase-1">
+                                #phrase-1 { color:red; }
+        5. Attribute selector : <input type="button">
+                                attribute → type="button"
+        6. Child Selector     : ul > li { color: red; } <-직계자손만
+                                ul   li { color: red; } <-아래 다
+        <ul>              <-Parent element
+            <li>사과</li>  <-child element
+            <li>딸기</li>
+            <li>참외</li>
+            <li>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+        </ul>
+           Identifier (고유 속성값)
+    -->
+    
+    <style>
+        /* Universal Selector*/
+        *{
+            margin: 0;
+            width: 800px;
+            text-align: center;
+        }
+        p{
+            border: 1px solid olive;
+            margin: 10px;
+            padding: 5px;
+        }
+        
+        /* Class Selector : <p class=".last-song" */
+        .last-song{
+            text-shadow: 1px 1px 2px black;
+            border-color: blueviolet;
+            color: blueviolet;
+        }
+
+        /* id selector */
+        #phrase-1{
+            color:chartreuse;
+            text-shadow: 1px 1px 2px black;
+        }
+        #phrase-2{
+            color:white;
+            text-shadow: 1px 1px 2px black;
+        }
+        /* Attribute selector */
+        input[type="button"]{
+            width: 150px;
+            color: blue;
+        }
+
+        /* value>type>id */
+        input[value="오전 수업 끝"]{
+            color: red;
+        }
+    /* CSS 우선순위 : ID > CLASS > ELEMENTS */
+    </style>
+
+</head>
+<body>
+ <h1>　애국가 2절</h1>
+ <p id="phrase-1"> 남산 위에 저 소나무 철갑을 두른 듯 </p>
+ <p id="phrase-2"> 바람 소리 불변함은 우리 기상일세 </p>
+
+ <p class="last-song"> 무궁화 삼천리 화려강산 </p>
+ <p class="last-song"> 대한사람 대한으로 길이 보전하세 </p>
+
+ <input type="text" id="msg">
+ <br>
+ <input type="button" value="점심 맛있게 드세요">
+ <br>
+ <input type="button" id="reded" value="오전 수업 끝" onclick="self.close();">
+
+</body>
+</html>

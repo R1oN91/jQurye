@@ -1,0 +1,25 @@
+*{
+    margin:0
+}
+/* margin: auto; -> margin-left margin right가 동일하게 잡힘 */
+#main-box{
+    width: 800px;
+    height: 600px;
+    background-color: gray;
+    margin: 0 auto;
+}
+/* width, height %값 -> 부모기준 */
+#header{
+    height: 100px;
+    background-color: red;
+}
+#content{
+    min-height: 400px;
+    height: auto;
+    background-color: gray;
+}
+
+#footer{
+    height: 100px;
+    background-color: green;
+}

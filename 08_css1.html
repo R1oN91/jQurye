@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS(Cascading Style Sheets)
+        1. Inline 방식 : 해당 태그 내에 직접 작성
+        2. Internal 방식(선언적 방식) : 해당 페이지 내에 선언적으로 작성
+        3. External 방식(CSS 분리)
+        4. 문법 선택자 {
+            속성 : 값
+            속성 : 값            
+        }
+     -->
+
+     <!-- external 적용 -->
+
+     <link rel="stylesheet" href="./css/my_style.css">
+
+     <!-- CSS Internal 적용 -->
+        <style>
+       
+        *{
+            margin: 0
+        }
+        body {
+               border: 1px solid red;
+
+        }
+        p{
+            border: 1px solid blue;
+            margin: 10px;
+            padding: 5px;
+            box-shadow: 1px 1px 3px black
+        }
+
+        </style>
+    </head>
+        <body>
+        <!-- CSS inline 적용 -->
+     
+        <p style="color:red;"> 찢어 꿰뚫듯 </p>
+        <p> 불꽃이 튀듯 </p>
+        <p> 뜨겁게 타올라보자 </p>
+        <p> 한 순간의 댄서 </p>
+        <p> 꿰뚫어 부숴버리자 </p>
+        <p class="last-song"> 누구보다도 반짝이도록 </p>
+        <p class="last-song"> 이 목숨을 불태워라 </p>
+
+
+
+        
+</body>
+</html>

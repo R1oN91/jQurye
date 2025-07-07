@@ -1,0 +1,36 @@
+#main-menu {
+    list-style: none;
+}
+/* 
+    block 요소의 특징
+    1. 1줄을 모두 차지한다.
+    2. 크기 조절이 가능하다.
+    in-line 요소의 특징
+    1. 컨텐츠 크기만큼만 차지
+    2. 크기 조절 불가능
+
+    display : block or inline or inline-block
+              none(숨김)
+ */
+#main-menu > li{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: black;
+}
+#main-menu > li > a{
+    display:block;
+    border:1px solid black;
+    text-decoration: none;
+    color:yellow;
+}
+#main-menu > li > a:hover {
+    display: block;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px black;
+    background-color: gray;
+    color:white;
+    border: 1px solid chartreuse;
+}
+
